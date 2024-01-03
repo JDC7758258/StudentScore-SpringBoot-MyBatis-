@@ -43,7 +43,7 @@ public class StudentController {
     	TStudent result=studentService.selectByNo(studentNo);
     	//统一返回
     	ResultObject<Object> rs=new ResultObject<Object>();
-    	if(null==result) {
+    	if(null==result) {                 
     		studentService.addStudent(student);
     		rs.setCode(Constant.SUCCESS_RETUEN_CODE);
     		rs.setMsg("增加学生信息成功");
